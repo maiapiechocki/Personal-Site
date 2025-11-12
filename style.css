@@ -4,69 +4,103 @@
          url('absans-main/fonts/Absans-Regular.woff') format('woff');
 }
 
-#links {
-    padding-left: 1rem;
-    padding-right: 2rem;
-    padding-top: 0rem;
-}
-
-#links a {
-    text-decoration: none;
-    color: inherit;
-}
-
-#links a:hover {
-    color: orange;
-}
-
 body {
     font-family: 'absans', sans-serif;
+    color: black; 
     margin: 0;
+    padding: 0;
     overflow: hidden;
     height: 100vh;
     width: 100vw;
-    background-color: black;
+    background: white; 
 }
 
-#particle-js{
-    position: fixed;
-    top:0;
-    left:0;
-    width: 100vw;
-    height:100vh;
-    z-index: 0;
-    background-color: transparent;
+#root:has(a:hover) a:not(:hover){
+    filter: blur(4px);
+    opacity: 0.5;
 }
+
+#root a {
+    text-decoration: none;
+    color: inherit;
+    transition: filter 0.3s ease-out, opacity 0.3s ease-out;
+    pointer-events: auto;
+}
+
+
+#root a:hover {
+    color: #444444; 
+}
+
+
+
+#particles-js {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0; 
+    background-color: transparent;
+    transition: filter 0.3s ease-out;
+}
+
+
 
 .flex-container {
     display: flex;
     flex-direction: row;
-    z-index: 1; 
-    color: white;
+    
+   
     position: relative;
+    z-index: 1; 
+    background-color: transparent;
+
+
+    height: 100vh;
+    color: black; 
     justify-content: space-between;
     align-items: flex-start;
-    row-gap: 0;
-    
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 2rem;
+
+    pointer-events: none;
+}
+
+
+
+#box1, #box2 {
+    background-color: transparent; 
+    padding: 0rem;
+    z-index: 2; 
+    pointer-events: auto;
+    cursor: pointer;
 }
 
 #box1 {
-    z-index: 1;
-    font-size: 2em;
+    font-size: 2rem;
     font-weight: lighter;
     text-align: left;
-    padding-top: 1rem;
+    
+}
+
+#box1 a {
+    text-decoration: none;
+    color: inherit;
+    pointer-events: auto;
+}
+
+#box1 a:hover {
+    color: #444444; 
 
 }
 
 #box2 {
-    z-index: 2;
-    font-size: 4.5em;
+    font-size: 5rem;
     font-weight: lighter;
     text-align: right;
-    flex-direction: column;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    padding: 0rem;
 }
