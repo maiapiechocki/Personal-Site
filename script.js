@@ -1,7 +1,7 @@
 function initParticles() {
             particlesJS('particles-js', {
                 "particles": {
-                    "number": { "value": 80, "density": { "enable": true, "value_area": 900 } },
+                    "number": { "value": 90, "density": { "enable": true, "value_area": 900 } },
                     "color": { "value": "#000000" },
                     "shape": { "type": "circle" },
                     "opacity": { "value": 0.5, "random": false },
@@ -26,7 +26,7 @@ function initParticles() {
                     "detect_on": "canvas",
                     "events": {
                         "onhover": { "enable": true, "mode": "repulse" },
-                        "onclick": { "enable": false, "mode": "push" },
+                        "onclick": { "enable": true, "mode": "push" },
                         "resize": true
                     },
                     "modes": {

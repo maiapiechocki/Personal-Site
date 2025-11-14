@@ -112,20 +112,17 @@
             backdrop-filter: blur(4px);
             padding-left: 1rem;
             padding-right: 1rem;
-            padding-bottom: 1rem;
+            padding-bottom: 5rem;
             padding-top:0% !important;
-            border-radius: 15px;
-            
-            width: 40vw;
-            max-width: 60vw;
-            
+            width: 50vw;
             font-weight: lighter;
-            
             display: flex;
             flex-direction: column;
             gap: 1.5rem; 
             align-items: flex-start; 
             text-align: left;
+            height:800px;
+            overflow: auto;
         }
 
         .panel-back-button {
@@ -144,10 +141,12 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.2);
             padding-bottom: 1.5rem;
             width: 100%;
+
         }
         .panel-project-item:last-child {
             border-bottom: none;
             padding-bottom: 0;
+            
         }
 
         .panel-project-item h3 {
@@ -177,6 +176,9 @@
             font-size: 2rem;
             margin: 0;
             cursor: auto;
+         }
+         #contact-panel {
+            height: 20rem;
          }
 
          #contact-link {
