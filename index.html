@@ -10,25 +10,53 @@
     
     <script src="particles.js-master/particles.min.js"></script>
 </head>
-
-<body>
-
-    <div id="particles-js"></div> 
+<div id="particles-js"></div>
 
     <div class="flex-container">
         <div id="box1">
             <a> maia piechocki</a>
         </div>
-        
-    <div id= "root">
-        <div id="box2">
-            <a > projects</a>
 
-            <a href="https://www.linkedin.com/in/maia-piechocki-746793346/" target="_blank"> linkedin</a>
-            <a> contact</a>
-            <a href="https://github.com/maiapiechocki" target="_blank"> github</a>
+        <div id="root">
+            <div id="box2">
+                
+                <div id="main-nav">
+                    <a id="show-projects">projects</a>
+                    <a id="show-contact"> contact</a>
+                    
+                    <a href="https://github.com/maiapiechocki" target="_blank"> github</a>
+                </div>
+                
+                <div id="project-panel" class="panel hidden">
+                    <a id="back-from-projects" class="panel-back-button">← back</a>
+                    
+                    <div class="panel-project-item">
+                        <h3>Project 1: Portfolio Site</h3>
+                        <p>This very website, built with vanilla HTML, CSS, and JavaScript, featuring the particles.js library for a dynamic background.</p>
+                    </div>
+                    
+                    <div class="panel-project-item">
+                        <h3>Project 2:</h3>
+                        <p>This very website, built with vanilla HTML, CSS, and JavaScript, featuring the particles.js library for a dynamic background. <a href="#">Learn more...</a></p>
+                    </div>
+
+                    <div class="panel-project-item">
+                        <h3>Project 3:</h3>
+                        <p>This very website, built with vanilla HTML, CSS, and JavaScript, featuring the particles.js library for a dynamic background.</p>
+                    </div>
+                </div>
+
+                <div id="contact-panel" class="panel hidden">
+                    <a id="back-from-contact" class="panel-back-button">← back</a>
+                    
+                    <p>You can reach me via email: piechock@usc.edu </p>
+
+                    <p>Or find me on <a href="https://www.linkedin.com/in/maia-piechocki-746793346/" target="_blank" id = contact-link>LinkedIn</a></p>
+                    
+                </div>
+
+            </div>
         </div>
-    
     </div>
     
     <script src="script.js"></script>
