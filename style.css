@@ -142,9 +142,6 @@ ul { list-style-type: none; }
 #project-panel {
     overflow-y: auto;
 }
-#contact-panel{
-    overflow:auto;
-}
 
 .panel-project-item {
     width: 95%;
@@ -178,15 +175,18 @@ ul { list-style-type: none; }
 
 #contact-panel a {
     text-decoration: none;
+    
 }
 
 #contact-panel p {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: 0;
+    line-height: .9rem;
 }
 
 #contact-panel {
-    height: 50rem;
+    overflow: auto;
+    
 }
 
 #contact-link {
@@ -197,6 +197,7 @@ ul { list-style-type: none; }
     cursor: pointer !important;
     user-select: none;
     transition: color 0.2s ease;
+    line-height: 0rem;
 }
 
 .copyable-email:hover {
@@ -208,6 +209,64 @@ ul { list-style-type: none; }
     opacity:0.6;
     display: block;
     font-weight: 300;
+    line-height: 0rem !important;
+
+}
+
+#contact-panel form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; 
+    align-self: stretch !important;
+}
+
+
+.form-row{
+    display: flex;
+    height: 2.2rem;
+    border: 1px solid #555;
+    width:100%;
+}
+
+#contact-panel input[type="email"],
+#contact-panel textarea {
+    background-color: transparent;
+    color: black; 
+    padding: 1rem;
+    font-family: 'absans', sans-serif;
+    font-size: 1.5rem;
+    box-sizing: border-box;
+
+}
+
+.form-row input[type="email"] {
+    flex-grow: 1; 
+    border: none; 
+    outline: none; 
+}
+#contact-panel textarea {
+    width: 100%;
+    min-height: 150px;
+    resize: vertical;
+    border: 1px solid #555; 
+    padding-top: 0rem !important;
+}
+
+.form-row button[type="submit"] {
+    background-color: #ccc;
+    color: #000;
+    border: none;
+    border-left: 1px solid black; /* Separator line */
+    padding: 0 1.5rem;
+    font-size: 1.5rem;
+    font-family: 'absans';
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.form-row:focus-within {
+    border-color: #000;
+    outline:#000;
 }
 
 @media (max-width: 600px) {
@@ -242,4 +301,7 @@ ul { list-style-type: none; }
     .panel-project-item p {
         font-size: 1rem;
     }
+
+
 }
+
