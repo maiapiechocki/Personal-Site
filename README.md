@@ -1,1 +1,1 @@
-Live at https://maiapiechocki.github.io/Personal-Site/
+Live at maiapiechocki.com
