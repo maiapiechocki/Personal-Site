@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             navigator.clipboard.writeText(emailText)
                 .then(() => {
-                    emailElement.innerText = 'Copied!';
+                    emailElement.innerText = 'copied!';
 
                     
                     setTimeout(() => {
