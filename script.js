@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // 1. Initialize Particles
     function initParticles() {
-        // Check if particles.js library is loaded and the element exists
         if (typeof particlesJS == 'function' && document.getElementById('particles-js')) {
             particlesJS('particles-js', {
                 "particles": {
@@ -46,7 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     initParticles(); 
 
-    // 2. Get all elements
     const mainNav = document.getElementById('main-nav');
     const projectPanel = document.getElementById('project-panel');
     const contactPanel = document.getElementById('contact-panel');
@@ -57,7 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const backFromProjectsBtn = document.getElementById('back-from-projects');
     const backFromContactBtn = document.getElementById('back-from-contact');
 
-    // 3. Define navigation functions
     function showMainNav() {
         if (mainNav) mainNav.classList.remove('hidden');
         if (projectPanel) projectPanel.classList.add('hidden');
@@ -76,7 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (contactPanel) contactPanel.classList.remove('hidden');
     }
 
-    // 4. Attach navigation listeners (with checks)
     if (showProjectsBtn) {
         showProjectsBtn.addEventListener('click', showProjects);
     }
@@ -90,30 +85,23 @@ document.addEventListener('DOMContentLoaded', () => {
         backFromContactBtn.addEventListener('click', showMainNav);
     }
 
-    // 5. Attach email copy listener (with check)
     
-    // --- THIS IS THE FIX ---
-    // It's 'myInput' (capital I), not 'myinput'
     const emailElement = document.getElementById('myInput'); 
     if (emailElement) {
         emailElement.addEventListener('click', () => {
             
-            // 1. Get the text to copy
             const emailSpan = emailElement.querySelector('.email-address');
-            if (!emailSpan) return; // Safety check
+            if (!emailSpan) return; 
             
             const emailText = emailSpan.innerText;
 
-            // 2. Store the ORIGINAL HTML, not just the text
             const originalHTML = emailElement.innerHTML;
 
-            // 3. Copy to clipboard
             navigator.clipboard.writeText(emailText)
                 .then(() => {
-                    // 4. Set temporary "Copied!" message (this is fine)
                     emailElement.innerText = 'Copied!';
 
-                    // 5. Restore the ORIGINAL HTML
+                    
                     setTimeout(() => {
                         emailElement.innerHTML = originalHTML;
                     }, 2000);

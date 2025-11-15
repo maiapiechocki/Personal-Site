@@ -5,7 +5,7 @@
 }
 
 html {
-    font-size: 100%; /* Default 16px base */
+    font-size: 100%; 
 }
 
 body {
@@ -13,7 +13,6 @@ body {
     color: black;
     margin: 0;
     padding: 0;
-    /* Use overflow-x: hidden to prevent horizontal scrolling issues on mobile */
     overflow-x: hidden; 
     height: 100vh;
     width: 100vw;
@@ -30,6 +29,7 @@ body {
     flex-direction: column;
     align-items: flex-end;
     line-height: 1.2;
+    cursor: pointer;
 }
 
 #root a {
@@ -57,7 +57,7 @@ body {
 
 .flex-container {
     display: flex;
-    flex-direction: row; /* Default: Row for desktop */
+    flex-direction: row; 
     position: relative;
     z-index: 1;
     background-color: transparent;
@@ -77,7 +77,6 @@ body {
     padding: 0rem;
     z-index: 2;
     pointer-events: auto;
-    cursor: pointer;
 }
 
 #box1 {
@@ -88,7 +87,7 @@ body {
 #box1 a {
     text-decoration: none;
     color: inherit;
-    position: fixed; /* Fixed position might need careful testing on mobile */
+    position: fixed; 
 }
 
 #box2 {
@@ -117,14 +116,14 @@ ul { list-style-type: none; }
     padding-right: 1rem;
     padding-bottom: 5rem;
     padding-top:0% !important;
-    width: 50vw; /* Default: 50% width for desktop */
+    width: 50vw; 
     font-weight: lighter;
     display: flex;
     flex-direction: column;
     gap: 1.5rem; 
     align-items: flex-start; 
     text-align: left;
-    height:800px; /* Fixed height can cause issues; consider height: auto or max-height */
+    height:800px; 
     overflow: hidden;
 }
 
@@ -148,23 +147,20 @@ ul { list-style-type: none; }
 }
 
 .panel-project-item {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    padding-bottom: 1.5rem;
-    width: 100%;
-}
-
-.panel-project-item:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
+    width: 95%;
+    border: 2px solid black;
+    padding: 1rem;
 }
 
 .panel-project-item h3 {
     font-size: 2.5rem;
-    font-weight: bold;
+    
     margin: 0 0 0.5rem 0;
     color: black;
     font-weight: lighter;
+    overflow-wrap: break-word;
 }
+
 
 .panel-project-item p {
     font-size: 1.5rem;
@@ -172,6 +168,8 @@ ul { list-style-type: none; }
     margin: 0;
     line-height: 1.5;
     font-weight: lighter;
+    overflow-wrap: break-word;
+
 }
 
 .panel-project-item a {
@@ -183,7 +181,7 @@ ul { list-style-type: none; }
 }
 
 #contact-panel p {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: 0;
 }
 
@@ -206,39 +204,37 @@ ul { list-style-type: none; }
 }
 
 .copy-text {
-    font-size: 1.5rem;
+    font-size: 1rem;
     opacity:0.6;
     display: block;
     font-weight: 300;
 }
 
-/* --- Mobile Specific Styles (Applied when screen width is 600px or less) --- */
 @media (max-width: 600px) {
     html {
-        font-size: 85%; /* Scales down all 'rem' units site-wide */
+        font-size: 85%; 
     }
 
     .flex-container {
-        flex-direction: column; /* Stack boxes vertically on phones */
+        flex-direction: column;
         padding-right: 1rem; 
     }
     
     #box1 {
-        position: relative; /* Change from fixed to relative for better mobile behavior */
+        position: relative; 
         margin-bottom: 1rem;
-        font-size: 1.5rem; /* Smaller font size on mobile */
+        font-size: 1.5rem; 
     }
     
     #box2, .panel-back-button {
-        font-size: 3rem; /* Smaller font size on mobile */
+        font-size: 3rem; 
     }
 
     .panel {
-        width: 90vw; /* Make the panel wider on mobile */
+        width: 90vw;
         padding-bottom: 2rem;
     }
 
-    /* Optional: Further adjust panel project item sizes for mobile readability */
     .panel-project-item h3 {
         font-size: 2rem;
     }
