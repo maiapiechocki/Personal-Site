@@ -26,6 +26,11 @@
             align-items: flex-end;
         }
 
+        #main-nav {
+            line-height: 1.2;
+        
+        }
+
         #root a {
             text-decoration: none;
             color: inherit;
@@ -35,7 +40,7 @@
 
         #root a:hover,
         .panel a:hover {
-            color: #444444;
+            color: #575656;
         }
 
         #particles-js {
@@ -77,14 +82,14 @@
 
         #box1 {
             font-size: 2rem;
-            font-weight: lighter;
-            text-align: left;
+            text-align: left;            
+            
         }
 
         #box1 a {
             text-decoration: none;
             color: inherit;
-            pointer-events: auto;
+            position:fixed;
         }
 
         #box2 {
@@ -95,6 +100,7 @@
             flex-direction: column;
             align-items: flex-end;
             position: relative;
+           
         }
         
         summary { list-style: none; list-style-type: none; }
@@ -122,7 +128,8 @@
             align-items: flex-start; 
             text-align: left;
             height:800px;
-            overflow: auto;
+            overflow: hidden;
+            
         }
 
         .panel-back-button {
@@ -134,7 +141,14 @@
             align-self: flex-end;
         }
         .panel-back-button:hover {
-            color: gray;
+            color: #575656;
+        }
+
+        #project-panel {
+            overflow-y: auto;
+        }
+        #contact-panel{
+            overflow:hidden;
         }
 
         .panel-project-item {
