@@ -104,7 +104,48 @@ document.addEventListener('DOMContentLoaded', () => {
         backFromAboutBtn.addEventListener('click', showMainNav);
     }
     
+    const contactForm = document.getElementById('contact-form');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault(); 
 
+            const form = event.target;
+            const data = new FormData(form);
+            const action = form.action;
+            const submitButton = form.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.innerText;
+
+            submitButton.disabled = true;
+            submitButton.innerText = 'sending';
+
+            fetch(action, {
+                method: 'POST',
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    form.reset(); 
+                    
+                    submitButton.innerText = 'sent!';
+                    setTimeout(() => {
+                        submitButton.disabled = false;
+                        submitButton.innerText = originalButtonText;
+                    }, 2000);
+                } else {
+                    submitButton.disabled = false;
+                    submitButton.innerText = originalButtonText;
+                    alert('Oops! There was a problem submitting your form.');
+                }
+            }).catch(error => {
+                submitButton.disabled = false;
+                submitButton.innerText = originalButtonText;
+                alert('Oops! A network error occurred.');
+            });
+        });
+    }
     
     const emailElement = document.getElementById('myInput'); 
     if (emailElement) {
