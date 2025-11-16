@@ -126,17 +126,13 @@ ul { list-style-type: none; }
 }
 
 .panel {
-    /* --- THIS IS THE FIX --- */
-    position: absolute; /* Was: relative */
-    top: 0;             /* ADDED */
-    right: 0;           /* ADDED */
-    /* --- END FIX --- */
-
+    position: absolute;
+    top: 0;
+    right: 0;
     background-color: transparent; 
     backdrop-filter: blur(4px);
     padding-left: 1rem;
     padding-right: 1rem;
-    padding-bottom: 5rem;
     padding-top:0% !important;
     width: 50vw; 
     font-weight: lighter;
@@ -145,8 +141,9 @@ ul { list-style-type: none; }
     gap: 1.5rem; 
     align-items: flex-start; 
     text-align: left;
-    height:800px; 
-    overflow: hidden;
+    
+    max-height: 90vh; 
+    overflow: hidden; 
 
     transform: translateX(0);
     opacity: 1;
@@ -175,14 +172,42 @@ ul { list-style-type: none; }
     color: black;
     cursor: pointer;
     align-self: flex-end;
+    flex-shrink: 0; 
 }
 
 .panel-back-button:hover {
     color: #575656;
 }
 
-#project-panel {
+/* --- THIS IS THE FIX --- */
+.panel-content-scrollable {
     overflow-y: auto;
+    overflow-x: hidden;
+    flex-grow: 1;
+    min-height: 0;
+    width: 100%;
+    padding-bottom: 2rem;
+
+    padding-right: 1rem; /* <-- ADDED: Gives space inside for the scrollbar */
+    box-sizing: border-box; /* <-- ADDED: Includes padding in the 100% width */
+}
+
+/* Specific rule for project-panel's scroll content */
+#project-panel .panel-project-item {
+    margin-bottom: 1.5rem; 
+}
+
+/* Specific rule for contact-panel's scroll content */
+#contact-panel .panel-content-scrollable {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; 
+    padding-top: 1rem;
+}
+
+
+#project-panel {
+    /* This is empty, which is fine */
 }
 
 .descriptor-container {
@@ -239,9 +264,7 @@ ul { list-style-type: none; }
     display: flex;
     flex-direction: row;
     gap: 1.5rem;
-    overflow-y: auto;
     width: 100%;
-    height: 100%;
 }
 
 .about-left-col {
@@ -305,8 +328,7 @@ ul { list-style-type: none; }
 }
 
 #contact-panel {
-    overflow-y: auto;
-    
+    /* This is empty, which is fine */
 }
 
 #contact-link {
@@ -346,6 +368,7 @@ ul { list-style-type: none; }
     height: 2.2rem;
     border: 1px solid #555;
     width:100%;
+    box-sizing: border-box;
 }
 
 #contact-panel input[type="email"],
@@ -390,6 +413,7 @@ ul { list-style-type: none; }
     outline:#000;
 }
 
+
 @media (max-width: 600px) {
     html {
         font-size: 85%; 
@@ -401,18 +425,46 @@ ul { list-style-type: none; }
     }
     
     #box1 {
-        position: relative; 
         margin-bottom: 1rem;
         font-size: 1.5rem; 
+    }
+
+    #box1 a {
+        transform: rotate(270deg); 
+        transform-origin: left top; 
+        top: 250px;
+        left: 0.5rem;
     }
     
     #box2 {
         font-size: 3rem; 
+        width: 100%;
     }
 
     .panel {
         width: 90vw;
         padding-bottom: 2rem;
+        overflow: hidden; 
+    }
+
+    .panel-content-scrollable {
+        /*
+          On mobile, we want the panel's main padding to handle things.
+          But our new desktop rule adds padding.
+          We must reset it here to avoid double padding.
+        */
+        padding-right: 0; 
+    }
+
+    .about-flex-container {
+        flex-direction: column;
+        align-items: center;
+        height: auto; 
+    }
+
+    .about-left-col {
+        align-items: center;
+        width: 100%;
     }
 
     .panel-project-item h3 {
