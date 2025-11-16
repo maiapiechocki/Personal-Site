@@ -47,23 +47,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const mainNav = document.getElementById('main-nav');
     const projectPanel = document.getElementById('project-panel');
     const contactPanel = document.getElementById('contact-panel');
+    const aboutPanel = document.getElementById('about-panel');
 
     const showProjectsBtn = document.getElementById('show-projects');
     const showContactBtn = document.getElementById('show-contact');
+    const showAboutBtn = document.getElementById('show-about');
 
     const backFromProjectsBtn = document.getElementById('back-from-projects');
     const backFromContactBtn = document.getElementById('back-from-contact');
+    const backFromAboutBtn = document.getElementById('back-from-about');
 
     function showMainNav() {
         if (mainNav) mainNav.classList.remove('hidden');
         if (projectPanel) projectPanel.classList.add('hidden');
         if (contactPanel) contactPanel.classList.add('hidden');
+        if(aboutPanel) aboutPanel.classList.add('hidden');
     }
 
     function showProjects() {
         if (mainNav) mainNav.classList.add('hidden');
         if (projectPanel) projectPanel.classList.remove('hidden');
         if (contactPanel) contactPanel.classList.add('hidden');
+
     }
     
     function showContact() {
@@ -72,11 +77,22 @@ document.addEventListener('DOMContentLoaded', () => {
         if (contactPanel) contactPanel.classList.remove('hidden');
     }
 
+    function showAbout() {
+        if (mainNav) mainNav.classList.add('hidden');
+        if (projectPanel) projectPanel.classList.add('hidden');
+        if (contactPanel) contactPanel.classList.add('hidden');
+        if(aboutPanel) aboutPanel.classList.remove('hidden');
+    }
+
+
     if (showProjectsBtn) {
         showProjectsBtn.addEventListener('click', showProjects);
     }
     if (showContactBtn) {
         showContactBtn.addEventListener('click', showContact);
+    }
+    if(showAboutBtn) {
+        showAboutBtn.addEventListener('click', showAbout);
     }
     if (backFromProjectsBtn) {
         backFromProjectsBtn.addEventListener('click', showMainNav);
@@ -84,6 +100,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (backFromContactBtn) {
         backFromContactBtn.addEventListener('click', showMainNav);
     }
+    if(backFromAboutBtn) {
+        backFromAboutBtn.addEventListener('click', showMainNav);
+    }
+    
 
     
     const emailElement = document.getElementById('myInput'); 

@@ -8,6 +8,10 @@ html {
     font-size: 100%; 
 }
 
+img {
+    border-radius: 15%;
+}
+
 body {
     font-family: 'Inter', 'absans', sans-serif;
     color: black;
@@ -125,6 +129,11 @@ ul { list-style-type: none; }
     text-align: left;
     height:800px; 
     overflow: hidden;
+    transition: opacity 0.5s ease-in;
+}
+
+.panel.is-visible {
+    opacity: 1;
 }
 
 .panel-back-button {
@@ -135,6 +144,7 @@ ul { list-style-type: none; }
     cursor: pointer;
     align-self: flex-end;
 }
+
 .panel-back-button:hover {
     color: #575656;
 }
@@ -143,16 +153,88 @@ ul { list-style-type: none; }
     overflow-y: auto;
 }
 
+.descriptor-container {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin-bottom: .5rem;
+}
+
+.panel-descriptor {
+    gap: .5px;
+}
+
+.project-descriptor p {
+    padding: .3rem;
+    border: 1px solid black;
+    font-size: .8rem !important;
+
+}
+
 .panel-project-item {
     width: 95%;
     border: 2px solid black !important;
     padding: 1rem;
 }
 
+
+#panel-about-item {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+
+}
+
+.panel-about-item a{
+    text-decoration: underline !important;
+}
+
+
+#socials a img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+#socials {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem; /* Adjust this value for more/less spacing */
+}
+
+.about-flex-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.about-left-col {
+    flex-shrink: 0; 
+    display: flex;
+    flex-direction: column;
+    gap: 0; /* Was 1rem, this tightens the space */
+}
+
+.about-right-col {
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.panel-about-item p{
+    font-size: 1.2rem;
+    color: black;
+    margin: 0;
+    line-height: 1.5;
+    font-weight: lighter;
+    overflow-wrap: break-word;
+}
+
 .panel-project-item h3 {
     font-size: 2.5rem;
-    
-    margin: 0 0 0.5rem 0;
+    margin: 0 0 0 0;
     color: black;
     font-weight: lighter;
     overflow-wrap: break-word;
@@ -260,9 +342,10 @@ ul { list-style-type: none; }
     padding: 0 1.5rem;
     font-size: 1.5rem;
     font-family: 'absans';
-    cursor: pointer;
-    transition: background-color 0.2s;
+    cursor: pointer; 
+    transition: background-color 0.2s; 
 }
+
 
 .form-row:focus-within {
     border-color: #000;
@@ -285,7 +368,7 @@ ul { list-style-type: none; }
         font-size: 1.5rem; 
     }
     
-    #box2, .panel-back-button {
+    #box2 {
         font-size: 3rem; 
     }
 
