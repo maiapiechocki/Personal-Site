@@ -230,6 +230,11 @@ ul { list-style-type: none; }
     line-height: 1.5;
     font-weight: lighter;
     overflow-wrap: break-word;
+    display: block;
+}
+
+.about-right-col .panel-about-item {
+    margin: 0;
 }
 
 .panel-project-item h3 {
