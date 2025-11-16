@@ -27,7 +27,13 @@ body {
     height: 100vh;
     width: 100vw;
     background: white;
+    overflow: auto !important;
 }
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
 
 #main-nav:has(a:hover) a:not(:hover) {
     filter: blur(4px);
@@ -40,10 +46,10 @@ body {
     align-items: flex-end;
     line-height: 1.2;
     cursor: pointer;
-
     opacity: 1;
     visibility: visible;
     transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+    position: fixed;
 }
 
 #root a {
@@ -235,6 +241,15 @@ ul { list-style-type: none; }
     overflow-y: auto;
 
 }
+#about-panel {
+    position: fixed;
+}
+#project-panel {
+    position: fixed;
+}
+#contact-panel {
+    position: fixed;
+}
 
 .panel-about-item a{
     text-decoration: underline !important;
@@ -401,4 +416,49 @@ ul { list-style-type: none; }
 .form-row:focus-within {
     border-color: #000;
     outline:#000;
+}
+
+
+@media (max-width: 768px) {
+    flex-container {
+    flex-direction: column; 
+    justify-content: flex-start;
+    gap: 2rem; 
+    padding: 1rem
+  }
+  #box1 {
+    font-size: 1.5rem;
+  }
+
+  #box2 {
+    font-size: 3rem;
+    align-items: flex-start;
+    text-align: left;
+    position: static; 
+  }
+
+  .panel {
+    width: 90vw;
+  }
+
+  .panel-back-button {
+      font-size: 3rem; 
+  }
+  .about-flex-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .panel-content-scrollable {
+    overflow-y: auto !important;
+    overflow-x: auto !important; 
+    flex-grow: 1;
+    min-height: 0;
+    width: 100%;
+    padding-bottom: 2rem;
+
+    padding-right: 1rem;
+    box-sizing: border-box;
+}
+
 }
