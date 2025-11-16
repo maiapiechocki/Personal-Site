@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const originalButtonText = submitButton.innerText;
 
             submitButton.disabled = true;
-            submitButton.innerText = 'sending';
+            submitButton.innerText = 'sending...';
 
             fetch(action, {
                 method: 'POST',
