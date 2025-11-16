@@ -188,16 +188,14 @@ ul { list-style-type: none; }
     width: 100%;
     padding-bottom: 2rem;
 
-    padding-right: 1rem; /* <-- ADDED: Gives space inside for the scrollbar */
-    box-sizing: border-box; /* <-- ADDED: Includes padding in the 100% width */
+    padding-right: 1rem;
+    box-sizing: border-box;
 }
 
-/* Specific rule for project-panel's scroll content */
 #project-panel .panel-project-item {
     margin-bottom: 1.5rem; 
 }
 
-/* Specific rule for contact-panel's scroll content */
 #contact-panel .panel-content-scrollable {
     display: flex;
     flex-direction: column;
@@ -205,10 +203,6 @@ ul { list-style-type: none; }
     padding-top: 1rem;
 }
 
-
-#project-panel {
-    /* This is empty, which is fine */
-}
 
 .descriptor-container {
     display: flex;
@@ -327,10 +321,6 @@ ul { list-style-type: none; }
     line-height: .9rem;
 }
 
-#contact-panel {
-    /* This is empty, which is fine */
-}
-
 #contact-link {
     text-decoration: underline !important;
 }
@@ -399,7 +389,7 @@ ul { list-style-type: none; }
     background-color: #ccc;
     color: #000;
     border: none;
-    border-left: 1px solid black; /* Separator line */
+    border-left: 1px solid black;
     padding: 0 1.5rem;
     font-size: 1.5rem;
     font-family: 'absans';
@@ -448,11 +438,7 @@ ul { list-style-type: none; }
     }
 
     .panel-content-scrollable {
-        /*
-          On mobile, we want the panel's main padding to handle things.
-          But our new desktop rule adds padding.
-          We must reset it here to avoid double padding.
-        */
+        
         padding-right: 0; 
     }
 
