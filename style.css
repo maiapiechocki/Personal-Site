@@ -567,8 +567,8 @@ body::-webkit-scrollbar {
     }
 
     #socials a img {
-        width: 40px !important;
-        height: 40px !important;
+        width: 80px !important;
+        height: 80px !important;
         object-fit: contain !important; 
         margin: 0 !important;
     }
