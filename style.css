@@ -353,6 +353,13 @@ body::-webkit-scrollbar {
     font-size: 1.5rem;
 }
 
+#myInput {
+    display: block; 
+    font-size: 1.5rem; 
+    font-weight: lighter; 
+    margin: 0; 
+}
+
 #contact-panel input[type="email"],
 #contact-panel textarea {
     background-color: transparent;
