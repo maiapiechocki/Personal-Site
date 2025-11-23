@@ -140,6 +140,8 @@ body::-webkit-scrollbar {
     pointer-events: auto;
 }
 
+
+
 #box1 {
     font-size: 2rem;
     text-align: left;
@@ -199,15 +201,14 @@ body::-webkit-scrollbar {
     pointer-events: none !important;
 }
 
-/* --- Header & Filters --- */
 .panel-header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse !important; 
     width: 100%;
-    justify-content: space-between;
-    align-items: center;
+    align-items: flex-end !important; /* Stick everything to the right */
     padding-top: 1rem;
     flex-shrink: 0; 
+    gap: 0.5rem;
 }
 
 .panel-header.right-align {
@@ -218,6 +219,7 @@ body::-webkit-scrollbar {
     display: flex;
     gap: 1rem;
     align-items: center;
+    justify-content: flex-end; /* Aligns text to the right */
 }
 
 .filter-btn {
@@ -245,6 +247,7 @@ body::-webkit-scrollbar {
     color: black;
     cursor: pointer;
     line-height: 1;
+    white-space: nowrap;
 }
 
 .panel-back-button:hover {
@@ -485,15 +488,14 @@ body::-webkit-scrollbar {
         position: static;
     }
 
+    .panel-back-button {
+        font-size: 3rem; 
+    }
+
     .panel {
         width: 90vw;
     }
     
-    .panel-header {
-        flex-direction: column-reverse; 
-        align-items: flex-end;
-        gap: 1rem;
-    }
     
     .panel-header.right-align {
          flex-direction: row;
