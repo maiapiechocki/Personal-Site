@@ -494,8 +494,8 @@ body::-webkit-scrollbar {
 .close-modal:hover {
     color: #575656;
 }
+
 @media (max-width: 768px) {
-    /* ... keep your existing general layout rules ... */
     .flex-container {
         flex-direction: column;
         justify-content: flex-start;
@@ -518,7 +518,6 @@ body::-webkit-scrollbar {
     .project-thumbnail { width: 100%; height: 200px; }
     #main-nav { width: auto; right: 1rem; top: 1rem; align-items: flex-end; }
 
-    /* --- ABOUT SECTION FIXES --- */
 
     .about-flex-container {
         display: flex;
@@ -526,14 +525,12 @@ body::-webkit-scrollbar {
         align-items: center;
         gap: 1.5rem;
     }
-
-    /* 1. TIGHTEN VERTICAL GAP (This brings icons closer to portrait) */
     .about-left-col {
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 0.5rem !important; /* Reduced from 1rem to pull icons up */
+        gap: 0 !important; 
     }
 
     .panel-about-item img {
@@ -541,44 +538,44 @@ body::-webkit-scrollbar {
         width: 60% !important;
         height: auto !important;
         margin: 0 auto;
+        display: block;
     }
 
-    /* 2. SOCIAL ICONS CONTAINER (Cleaned up) */
     #socials {
         display: flex !important;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        gap: 10px; /* Horizontal spacing between icons */
+        
+        gap: 8px; 
+        
         width: 100%;
-        margin-top: 5px !important;   /* Minimal space above */
-        margin-bottom: 5px !important; /* Minimal space below */
+        
+        margin-top: 5px !important;    
+        margin-bottom: 5px !important; 
     }
 
     #socials a {
-        display: flex; /* Changed to flex to center the img perfectly */
+        display: flex;
         justify-content: center;
         align-items: center;
         line-height: 0;
     }
 
-    /* 3. ICON SIZE (Single, authoritative rule) */
-    /* I removed the conflicting '40px' rule you had before */
     #socials a img {
-        width: 65px !important; 
+        width: 65px !important;
         height: 65px !important;
         object-fit: contain !important;
         margin: 0 !important;
     }
 
-    /* 4. TEXT LAYOUT */
     .about-right-col {
         width: 100%;
         padding: 0 0.5rem;
     }
 
     .about-right-col p {
-        margin-top: 5px !important;
+        margin-top: 5px !important; 
     }
 
     .panel-about-item p,
