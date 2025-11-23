@@ -562,7 +562,13 @@ body::-webkit-scrollbar {
     .about-right-col {
         width: 100%;
         text-align: center; 
-        padding: 0 1rem; 
+        padding: 0 0 .5rem; 
+    }
+
+    .panel-about-item p {
+        font-size: 1.2rem !important; 
+        line-height: 1.4;
+        text-align: left; 
     }
 
     .about-left-col {
@@ -570,8 +576,15 @@ body::-webkit-scrollbar {
     }
 
     #socials a img {
-        width: 30px; 
-        height: 30px; 
+        display: flex;
+        justify-content: center;
+        gap: 1rem; 
+        width: 100%; 
+        margin-top: 0.5rem; 
+    }
+    #socials a img {
+        width: 40px; 
+        height: 40px; 
     }
 
     .about-right-col p {
