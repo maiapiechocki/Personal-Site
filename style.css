@@ -556,6 +556,8 @@ body::-webkit-scrollbar {
     #socials a {
         display: inline-block;
         line-height: 0;
+        justify-content: center;    
+        align-items: center;
     }
 
     #socials img {
@@ -564,6 +566,13 @@ body::-webkit-scrollbar {
         margin: 0 !important; /
     }
 
+    #socials a img {
+        width: 40px !important;
+        height: 40px !important;
+        object-fit: contain !important; 
+        margin: 0 !important;
+    }
+    
     .about-right-col {
         width: 100%;
         padding: 0 0.5rem;
