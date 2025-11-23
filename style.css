@@ -547,7 +547,7 @@ body::-webkit-scrollbar {
         justify-content: center;
         align-items: center;
         
-        gap: 2px; 
+        gap: 2px !important; 
         
         width: 100%;
         
