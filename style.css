@@ -494,8 +494,8 @@ body::-webkit-scrollbar {
 .close-modal:hover {
     color: #575656;
 }
-
 @media (max-width: 768px) {
+    /* ... keep your existing general layout rules ... */
     .flex-container {
         flex-direction: column;
         justify-content: flex-start;
@@ -504,14 +504,12 @@ body::-webkit-scrollbar {
     }
 
     #box1 { font-size: 1.5rem; }
-
     #box2 {
         font-size: 3rem;
-        align-items: flex-start; 
+        align-items: flex-start;
         text-align: left;
         position: static;
     }
-
     .panel-back-button { font-size: 3rem; }
     .panel { width: 90vw; }
     .panel-header.right-align { flex-direction: row; }
@@ -520,71 +518,68 @@ body::-webkit-scrollbar {
     .project-thumbnail { width: 100%; height: 200px; }
     #main-nav { width: auto; right: 1rem; top: 1rem; align-items: flex-end; }
 
+    /* --- ABOUT SECTION FIXES --- */
 
     .about-flex-container {
         display: flex;
         flex-direction: column;
-        align-items: center; 
+        align-items: center;
         gap: 1.5rem;
     }
 
+    /* 1. TIGHTEN VERTICAL GAP (This brings icons closer to portrait) */
     .about-left-col {
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 0.5rem !important; /* Reduced from 1rem to pull icons up */
     }
 
     .panel-about-item img {
         max-width: 60% !important;
         width: 60% !important;
         height: auto !important;
-        margin: 0 auto; 
+        margin: 0 auto;
     }
 
-    
+    /* 2. SOCIAL ICONS CONTAINER (Cleaned up) */
     #socials {
         display: flex !important;
         flex-direction: row;
-        justify-content: center; 
+        justify-content: center;
         align-items: center;
-        gap: 10px; 
+        gap: 10px; /* Horizontal spacing between icons */
         width: 100%;
-        margin-top: 5px !important;
-        margin-bottom: 5px !important;
+        margin-top: 5px !important;   /* Minimal space above */
+        margin-bottom: 5px !important; /* Minimal space below */
     }
 
     #socials a {
-        display: inline-block;
-        line-height: 0;
-        justify-content: center;    
+        display: flex; /* Changed to flex to center the img perfectly */
+        justify-content: center;
         align-items: center;
+        line-height: 0;
     }
 
-    #socials img {
-        width: 40px !important;
-        height: 40px !important;
-        margin: 0 !important; 
-    }
-
+    /* 3. ICON SIZE (Single, authoritative rule) */
+    /* I removed the conflicting '40px' rule you had before */
     #socials a img {
-        width: 65px !important;
+        width: 65px !important; 
         height: 65px !important;
-        object-fit: contain !important; 
+        object-fit: contain !important;
         margin: 0 !important;
     }
-    
+
+    /* 4. TEXT LAYOUT */
     .about-right-col {
         width: 100%;
         padding: 0 0.5rem;
     }
 
     .about-right-col p {
-        margin-top: 5px !important; 
-        
+        margin-top: 5px !important;
     }
-
-
 
     .panel-about-item p,
     .about-right-col p {
