@@ -291,7 +291,7 @@ body::-webkit-scrollbar {
 #socials a img {
     width: 40px;
     height: 40px;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .about-flex-container {
@@ -550,7 +550,7 @@ body::-webkit-scrollbar {
         align-items: center;
         gap: 15px; 
         width: 100%;
-        margin-top: 10px;
+        margin-top: 5px;
     }
 
     #socials a {
@@ -567,8 +567,8 @@ body::-webkit-scrollbar {
     }
 
     #socials a img {
-        width: 80px !important;
-        height: 80px !important;
+        width: 65px !important;
+        height: 65px !important;
         object-fit: contain !important; 
         margin: 0 !important;
     }
