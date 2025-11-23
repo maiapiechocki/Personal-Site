@@ -548,9 +548,10 @@ body::-webkit-scrollbar {
         flex-direction: row;
         justify-content: center; 
         align-items: center;
-        gap: 15px; 
+        gap: 10px; 
         width: 100%;
-        margin-top: 5px;
+        margin-top: 5px !important;
+        margin-bottom: 5px !important;
     }
 
     #socials a {
@@ -563,7 +564,7 @@ body::-webkit-scrollbar {
     #socials img {
         width: 40px !important;
         height: 40px !important;
-        margin: 0 !important; /
+        margin: 0 !important; 
     }
 
     #socials a img {
@@ -577,6 +578,13 @@ body::-webkit-scrollbar {
         width: 100%;
         padding: 0 0.5rem;
     }
+
+    .about-right-col p {
+        margin-top: 5px !important; 
+        
+    }
+
+
 
     .panel-about-item p,
     .about-right-col p {
