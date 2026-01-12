@@ -13,8 +13,6 @@ img {
     display: block;
 }
 
-/* --- Project List Layout Changes --- */
-
 .panel-project-item {
     width: 95%;
     border: 2px solid black !important;
@@ -25,7 +23,6 @@ img {
     display: flex;
     flex-direction: row;
     gap: 1.5rem;
-    /* Align items to top so text doesn't center vertically if image is tall */
     align-items: flex-start; 
 }
 
@@ -222,7 +219,7 @@ body::-webkit-scrollbar {
     display: flex;
     gap: 1rem;
     align-items: center;
-    justify-content: flex-end; /* Aligns text to the right */
+    justify-content: flex-end;
 }
 
 .filter-btn {
