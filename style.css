@@ -71,6 +71,8 @@ body {
 
 body::-webkit-scrollbar {
     display: none;
+    background: #faf7ee;
+
 }
 
 #main-nav:has(a:hover) a:not(:hover) {
@@ -263,6 +265,8 @@ body::-webkit-scrollbar {
     padding-bottom: 2rem;
     padding-right: 1rem;
     box-sizing: border-box;
+    scrollbar-color: #ccc #faf7ee;
+
 }
 
 .descriptor-container {
