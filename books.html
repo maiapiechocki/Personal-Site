@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books | Maia Piechocki</title>
+    <style>
+        body {
+            background-color: #faf7ee;
+            margin: 0;
+            padding: 40px 20px;
+            font-family: sans-serif;
+        }
+
+        .page-wrapper {
+            max-width: 960px;
+            position: relative;
+        }
+
+        .close-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    }
+
+    .close-btn::before,
+    .close-btn::after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 2px;
+        background: black;
+        transform-origin: center;
+        position: absolute;
+        top: 50%;
+    }
+    .close-btn::before { transform: rotate(45deg); }
+    .close-btn::after  { transform: rotate(-45deg); }
+
+        .year-section {
+            margin-bottom: 40px;
+        }
+
+        .year-label {
+            font-size: 14px;
+            margin: 0 0 16px 0;
+            font-weight: normal;
+            color: #111;
+        }
+
+        .book-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .book-cover {
+            width: 60px;
+            height: 88px;
+            object-fit: cover;
+            display: block;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .book-cover:hover {
+            opacity: 0.75;
+        }
+
+        .book-placeholder {
+            width: 60px;
+            height: 88px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            text-align: center;
+            padding: 4px;
+            box-sizing: border-box;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+    <a href="garden.html" class="close-btn" aria-label="Close"></a>
+
+    <div class="year-section">
+        <p class="year-label">2026</p>
+        <div class="book-grid">
+            <div class="book-placeholder">Lars Mytting</div>
+        </div>
+    </div>
+
+    <div class="year-section">
+        <p class="year-label">2025</p>
+        <div class="book-grid">
+            <div class="book-placeholder">Tove Alstrup Dæmon</div>
+            <div class="book-placeholder">Stargate jul</div>
+            <div class="book-placeholder">Book 3</div>
+            <div class="book-placeholder">Mary Willey Fantastisk Natur</div>
+            <div class="book-placeholder">Knut Hamsun Markens Grøde</div>
+            <div class="book-placeholder">Kathrine Nedrejord Gameproblems</div>
+            <div class="book-placeholder">F. Scott Fitzgerald The Great Gatsby</div>
+            <div class="book-placeholder">Alex Michaelides Den Tavse Pasienten</div>
+            <div class="book-placeholder">Mirel Niem Vittula</div>
+            <div class="book-placeholder">Andrew Walden Jævla i Menn</div>
+            <div class="book-placeholder">Book 11</div>
+            <div class="book-placeholder">Lotte Anderlasser</div>
+            <div class="book-placeholder">Smittbøt &amp; Fordom</div>
+            <div class="book-placeholder">Book 14</div>
+            <div class="book-placeholder">Dag Solstad</div>
+            <div class="book-placeholder">Katti Anker Møller</div>
+            <div class="book-placeholder">Doppler Blix</div>
+            <div class="book-placeholder">Solvej Balle I</div>
+            <div class="book-placeholder">Édouard Louis</div>
+        </div>
+    </div>
+
+    <div class="year-section">
+        <p class="year-label">2024</p>
+        <div class="book-grid">
+            <div class="book-placeholder">Har Døden Taget Noget</div>
+            <div class="book-placeholder">Fromme Mor Eykel-To</div>
+            <div class="book-placeholder">Tore Renberg Pixley Mapogo</div>
+            <div class="book-placeholder">Naiv Super</div>
+            <div class="book-placeholder">Book 5</div>
+            <div class="book-placeholder">Agnes Ravatn Gjestene</div>
+            <div class="book-placeholder">Maria Kjøs Fonn Heroin Chic</div>
+            <div class="book-placeholder">Book 8</div>
+            <div class="book-placeholder">Ingvar Ambjørnsen</div>
+            <div class="book-placeholder">Knut Hamsun Victoria</div>
+            <div class="book-placeholder">Book 11</div>
+            <div class="book-placeholder">Book 12</div>
+            <div class="book-placeholder">Book 13</div>
+            <div class="book-placeholder">Book 14</div>
+            <div class="book-placeholder">Book 15</div>
+            <div class="book-placeholder">Helga</div>
+            <div class="book-placeholder">Helga 2</div>
+            <div class="book-placeholder">Book 18</div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

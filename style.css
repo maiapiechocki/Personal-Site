@@ -44,7 +44,7 @@ img {
     margin: 0; 
     cursor: pointer;
     transition: opacity 0.3s ease, transform 0.3s ease;
-    border: 1px solid #ccc;
+    border: 1px solid #faf7ee;
 }
 
 .project-thumbnail:hover {
@@ -66,7 +66,7 @@ body {
     overflow: hidden;
     height: 100vh;
     width: 100vw;
-    background: white;
+    background: #faf7ee;
 }
 
 body::-webkit-scrollbar {
@@ -405,7 +405,7 @@ body::-webkit-scrollbar {
 }
 
 .form-row button[type="submit"] {
-    background-color: #ccc;
+    background-color: #F5F0DB;
     color: #000;
     border: none;
     border-left: 1px solid black;
