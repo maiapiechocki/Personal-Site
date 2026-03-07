@@ -1,9 +1,3 @@
-@font-face {
-    font-family: 'absans';
-    src: url('absans-main/fonts/Absans-Regular.woff2') format('woff2'),
-         url('absans-main/fonts/Absans-Regular.woff') format('woff');
-}
-
 html {
     font-size: 100%;
 }
@@ -11,6 +5,19 @@ html {
 img {
     border-radius: 15%;
     display: block;
+}
+
+/* Global Typography Update */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 300; /* Light weight */
+    color: black;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    background: #faf7ee;
 }
 
 .panel-project-item {
@@ -52,27 +59,13 @@ img {
     transform: scale(1.02);
 }
 
-
-
 .social-icon:hover {
     filter: invert(50%);
-}
-
-body {
-    font-family: 'Inter', 'absans', sans-serif;
-    color: black;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    height: 100vh;
-    width: 100vw;
-    background: #faf7ee;
 }
 
 body::-webkit-scrollbar {
     display: none;
     background: #faf7ee;
-
 }
 
 #main-nav:has(a:hover) a:not(:hover) {
@@ -139,8 +132,6 @@ body::-webkit-scrollbar {
     pointer-events: auto;
 }
 
-
-
 #box1 {
     font-size: 2rem;
     text-align: left;
@@ -154,7 +145,7 @@ body::-webkit-scrollbar {
 
 #box2 {
     font-size: 5rem;
-    font-weight: lighter;
+    font-weight: 300; /* Light */
     text-align: right;
     display: flex;
     flex-direction: column;
@@ -177,7 +168,7 @@ body::-webkit-scrollbar {
     padding-right: 1rem;
     padding-top: 0% !important;
     width: 50vw;
-    font-weight: lighter;
+    font-weight: 300; /* Light */
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -190,10 +181,8 @@ body::-webkit-scrollbar {
     visibility: visible;
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
     font-size: 1.2rem;
-
     -webkit-backdrop-filter: blur(4px); 
     backdrop-filter: blur(4px);
-
 }
 
 .panel.hidden {
@@ -230,6 +219,7 @@ body::-webkit-scrollbar {
     color: #999;
     transition: color 0.3s ease;
     user-select: none;
+    font-weight: 300;
 }
 
 .filter-btn:hover {
@@ -239,13 +229,13 @@ body::-webkit-scrollbar {
 .filter-btn.active {
     color: #000;
     text-decoration: underline;
-    font-weight: normal;
+    font-weight: 400; /* Slightly heavier for active state */
 }
 
 .panel-back-button {
     padding-top: 0% !important;
     font-size: 5rem; 
-    font-weight: lighter;
+    font-weight: 300; /* Light */
     color: black;
     cursor: pointer;
     line-height: 1;
@@ -266,7 +256,6 @@ body::-webkit-scrollbar {
     padding-right: 1rem;
     box-sizing: border-box;
     scrollbar-color: #ccc #faf7ee;
-
 }
 
 .descriptor-container {
@@ -280,6 +269,7 @@ body::-webkit-scrollbar {
     padding: .3rem;
     border: 1px solid black;
     font-size: .8rem !important;
+    font-weight: 300;
 }
 
 .panel-project-item.hidden-item {
@@ -324,7 +314,7 @@ body::-webkit-scrollbar {
     color: black;
     margin: 0;
     line-height: 1.5;
-    font-weight: lighter;
+    font-weight: 300; /* Light */
     overflow-wrap: break-word;
 }
 
@@ -347,11 +337,10 @@ body::-webkit-scrollbar {
     font-size: 2rem;
     margin: 0;
     color: black;
-    font-weight: lighter;
+    font-weight: 300; /* Light */
     overflow-wrap: break-word;
     word-break: break-word;
 }
-
 
 .contact-intro {
     font-size: 1.5rem !important;
@@ -375,7 +364,7 @@ body::-webkit-scrollbar {
 #myInput {
     display: block; 
     font-size: 1.5rem; 
-    font-weight: lighter; 
+    font-weight: 300; /* Light */
     margin: 0; 
 }
 
@@ -386,7 +375,8 @@ body::-webkit-scrollbar {
     backdrop-filter: blur(4px);
     color: black;
     padding: 1rem;
-    font-family: 'absans', sans-serif;
+    font-family: inherit; /* Uses body font */
+    font-weight: 300;
     font-size: 1.5rem;
     box-sizing: border-box;
 }
@@ -415,7 +405,8 @@ body::-webkit-scrollbar {
     border-left: 1px solid black;
     padding: 0 1.5rem;
     font-size: 1.5rem;
-    font-family: 'absans';
+    font-family: inherit;
+    font-weight: 300;
     cursor: pointer;
     transition: background-color 0.2s;
     box-sizing: border-box;
@@ -487,7 +478,7 @@ body::-webkit-scrollbar {
     right: 40px;
     color: #000;
     font-size: 60px;
-    font-weight: lighter;
+    font-weight: 300;
     cursor: pointer;
     line-height: 0.8;
     z-index: 10000;
@@ -520,7 +511,6 @@ body::-webkit-scrollbar {
     .project-thumbnail { width: 100%; height: 200px; }
     #main-nav { width: auto; right: 1rem; top: 1rem; align-items: flex-end; }
 
-
     .about-flex-container {
         display: flex;
         flex-direction: column;
@@ -548,11 +538,8 @@ body::-webkit-scrollbar {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        
         gap: 2px !important; 
-        
         width: 100%;
-        
         margin-top: 5px !important;    
         margin-bottom: 5px !important; 
     }

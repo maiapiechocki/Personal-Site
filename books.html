@@ -10,6 +10,7 @@
             margin: 0;
             padding: 40px 20px;
             font-family: sans-serif;
+            margin-left: 60px;
         }
 
         .page-wrapper {
@@ -18,34 +19,34 @@
         }
 
         .close-btn {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-    width: 60px;
-    height: 60px;
-    }
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            width: 60px;
+            height: 60px;
+        }
 
-    .close-btn::before,
-    .close-btn::after {
-        content: '';
-        display: block;
-        width: 50px;
-        height: 2px;
-        background: black;
-        transform-origin: center;
-        position: absolute;
-        top: 50%;
-    }
-    .close-btn::before { transform: rotate(45deg); }
-    .close-btn::after  { transform: rotate(-45deg); }
+        .close-btn::before,
+        .close-btn::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 2px;
+            background: black;
+            transform-origin: center;
+            position: absolute;
+            top: 50%;
+        }
+        .close-btn::before { transform: rotate(45deg); }
+        .close-btn::after  { transform: rotate(-45deg); }
 
         .year-section {
             margin-bottom: 40px;
         }
 
         .year-label {
-            font-size: 14px;
+            font-size: 15px;
             margin: 0 0 16px 0;
             font-weight: normal;
             color: #111;
@@ -54,34 +55,28 @@
         .book-grid {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 15px;
+
         }
 
-        .book-cover {
-            width: 60px;
-            height: 88px;
-            object-fit: cover;
+        .book {
+            width: 80px;
+            height: 115px;
+            overflow: hidden;
+            flex-shrink: 0;
             display: block;
-            cursor: pointer;
             transition: opacity 0.2s;
         }
 
-        .book-cover:hover {
+        .book:hover {
             opacity: 0.75;
         }
 
-        .book-placeholder {
-            width: 60px;
-            height: 88px;
-            background-color: #ddd;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 10px;
-            text-align: center;
-            padding: 4px;
-            box-sizing: border-box;
-            color: #555;
+        .book img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
     </style>
 </head>
@@ -93,58 +88,94 @@
     <div class="year-section">
         <p class="year-label">2026</p>
         <div class="book-grid">
-            <div class="book-placeholder">Lars Mytting</div>
+            <a class="book" href="https://www.goodreads.com/review/show/8318300298?book_show_action=false" target="_blank"><img src="books/schoolgirl.jpg" alt="Schoolgirl"></a>
+            <a class="book" href="https://www.goodreads.com/review/show/8318323016?book_show_action=false" target="_blank"><img src="books/whitenights.jpg" alt="Schoolgirl"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/12483882-schoolgirl" target="_blank"><img src="books/zen.jpg" alt="Schoolgirl"></a>
         </div>
     </div>
 
     <div class="year-section">
         <p class="year-label">2025</p>
         <div class="book-grid">
-            <div class="book-placeholder">Tove Alstrup Dæmon</div>
-            <div class="book-placeholder">Stargate jul</div>
-            <div class="book-placeholder">Book 3</div>
-            <div class="book-placeholder">Mary Willey Fantastisk Natur</div>
-            <div class="book-placeholder">Knut Hamsun Markens Grøde</div>
-            <div class="book-placeholder">Kathrine Nedrejord Gameproblems</div>
-            <div class="book-placeholder">F. Scott Fitzgerald The Great Gatsby</div>
-            <div class="book-placeholder">Alex Michaelides Den Tavse Pasienten</div>
-            <div class="book-placeholder">Mirel Niem Vittula</div>
-            <div class="book-placeholder">Andrew Walden Jævla i Menn</div>
-            <div class="book-placeholder">Book 11</div>
-            <div class="book-placeholder">Lotte Anderlasser</div>
-            <div class="book-placeholder">Smittbøt &amp; Fordom</div>
-            <div class="book-placeholder">Book 14</div>
-            <div class="book-placeholder">Dag Solstad</div>
-            <div class="book-placeholder">Katti Anker Møller</div>
-            <div class="book-placeholder">Doppler Blix</div>
-            <div class="book-placeholder">Solvej Balle I</div>
-            <div class="book-placeholder">Édouard Louis</div>
+            <a class="book" href="https://www.goodreads.com/book/show/12483882-schoolgirl" target="_blank"><img src="books/justkids.jpg" alt="Schoolgirl"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/12483882-schoolgirl" target="_blank"><img src="books/alchemist.jpg" alt="Schoolgirl"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/12483882-schoolgirl" target="_blank"><img src="books/rick.jpg" alt="Schoolgirl"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/12483882-schoolgirl" target="_blank"><img src="books/1984.jpg" alt="Schoolgirl"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/12483882-schoolgirl" target="_blank"><img src="books/minor.jpg" alt="Schoolgirl"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/12483882-schoolgirl" target="_blank"><img src="books/atomic.jpg" alt="Schoolgirl"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/12483882-schoolgirl" target="_blank"><img src="books/kafkashor.jpg" alt="Schoolgirl"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/12483882-schoolgirl" target="_blank"><img src="books/tennis.jpg" alt="Schoolgirl"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/12483882-schoolgirl" target="_blank"><img src="books/gantz.jpg" alt="Schoolgirl"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/12483882-schoolgirl" target="_blank"><img src="books/steve.jpg" alt="Schoolgirl"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/12483882-schoolgirl" target="_blank"><img src="books/dance.jpg" alt="Schoolgirl"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/12483882-schoolgirl" target="_blank"><img src="books/ulysses.jpg" alt="Schoolgirl"></a>
+
         </div>
     </div>
 
     <div class="year-section">
         <p class="year-label">2024</p>
         <div class="book-grid">
-            <div class="book-placeholder">Har Døden Taget Noget</div>
-            <div class="book-placeholder">Fromme Mor Eykel-To</div>
-            <div class="book-placeholder">Tore Renberg Pixley Mapogo</div>
-            <div class="book-placeholder">Naiv Super</div>
-            <div class="book-placeholder">Book 5</div>
-            <div class="book-placeholder">Agnes Ravatn Gjestene</div>
-            <div class="book-placeholder">Maria Kjøs Fonn Heroin Chic</div>
-            <div class="book-placeholder">Book 8</div>
-            <div class="book-placeholder">Ingvar Ambjørnsen</div>
-            <div class="book-placeholder">Knut Hamsun Victoria</div>
-            <div class="book-placeholder">Book 11</div>
-            <div class="book-placeholder">Book 12</div>
-            <div class="book-placeholder">Book 13</div>
-            <div class="book-placeholder">Book 14</div>
-            <div class="book-placeholder">Book 15</div>
-            <div class="book-placeholder">Helga</div>
-            <div class="book-placeholder">Helga 2</div>
-            <div class="book-placeholder">Book 18</div>
+            <a class="book" href="https://www.goodreads.com/book/show/12483882-schoolgirl" target="_blank"><img src="books/sidartha.jpg" alt="Schoolgirl"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/12483882-schoolgirl" target="_blank"><img src="books/girldragon.jpg" alt="Schoolgirl"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/12483882-schoolgirl" target="_blank"><img src="books/1q84.jpg" alt="Schoolgirl"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/12483882-schoolgirl" target="_blank"><img src="books/gatsby.jpg" alt="Schoolgirl"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/12483882-schoolgirl" target="_blank"><img src="books/almanack.jpg" alt="Schoolgirl"></a>
+
         </div>
     </div>
+
+    <div class="year-section">
+        <p class="year-label">2023</p>
+        <div class="book-grid">
+            <a class="book" href="https://www.goodreads.com/book/show/12483882-schoolgirl" target="_blank"><img src="books/sheepchase.jpg" alt="Schoolgirl"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/12483882-schoolgirl" target="_blank"><img src="books/postoffice.jpg" alt="Schoolgirl"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/12483882-schoolgirl" target="_blank"><img src="books/virginsuicides.jpg" alt="Schoolgirl"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/12483882-schoolgirl" target="_blank"><img src="books/geisha.jpg" alt="Schoolgirl"></a>
+
+
+        </div>
+    </div>
+
+    <div class="year-section">
+        <p class="year-label">2022</p>
+        <div class="book-grid">
+            <a class="book" href="https://www.goodreads.com/book/show/12483882-schoolgirl" target="_blank"><img src="books/umberto.jpg" alt="Schoolgirl"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/12483882-schoolgirl" target="_blank"><img src="books/beautifulboy.jpg" alt="Schoolgirl"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/12483882-schoolgirl" target="_blank"><img src="books/prince.jpg" alt="Schoolgirl"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/12483882-schoolgirl" target="_blank"><img src="books/midnightlibrary.jpg" alt="Schoolgirl"></a>
+
+        </div>
+    </div>
+
+    <div class="year-section">
+        <p class="year-label">2021</p>
+        <div class="book-grid">
+            <a class="book" href="https://www.goodreads.com/book/show/12483882-schoolgirl" target="_blank"><img src="books/catcher.jpg" alt="Schoolgirl"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/12483882-schoolgirl" target="_blank"><img src="books/animalfarm.jpg" alt="Schoolgirl"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/12483882-schoolgirl" target="_blank"><img src="books/countmonte.jpg" alt="Schoolgirl"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/12483882-schoolgirl" target="_blank"><img src="books/prideprejudice.jpg" alt="Schoolgirl"></a>
+
+
+        </div>
+    </div>
+
+    <div class="year-section">
+        <p class="year-label">2020</p>
+        <div class="book-grid">
+            <a class="book" href="https://www.goodreads.com/book/show/12483882-schoolgirl" target="_blank"><img src="books/illiad.jpg" alt="Schoolgirl"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/12483882-schoolgirl" target="_blank"><img src="books/aenead.jpg" alt="Schoolgirl"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/12483882-schoolgirl" target="_blank"><img src="books/bravenew.jpg" alt="Schoolgirl"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/12483882-schoolgirl" target="_blank"><img src="books/micemen.jpg" alt="Schoolgirl"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/12483882-schoolgirl" target="_blank"><img src="books/mocking.png" alt="Schoolgirl"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/12483882-schoolgirl" target="_blank"><img src="books/farenheit.png" alt="Schoolgirl"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/12483882-schoolgirl" target="_blank"><img src="books/chosen.jpg" alt="Schoolgirl"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/12483882-schoolgirl" target="_blank"><img src="books/illustrated.png" alt="Schoolgirl"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/12483882-schoolgirl" target="_blank"><img src="books/macbeth.jpg" alt="Schoolgirl"></a>
+
+        </div>
+    </div>
+    
 
 </div>
 </body>
