@@ -9,11 +9,9 @@
         body {
             background-color: #fffdf7;
             margin: 0;
-            padding: 40px 20px;
+            padding: 80px 40px 40px 80px;
             font-family: sans-serif;
-            margin-left: 100px;
-            margin-top: 80px;
-
+            box-sizing: border-box;
         }
 
         .page-wrapper {
@@ -59,7 +57,6 @@
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
-
         }
 
         .book {
@@ -80,6 +77,34 @@
             height: 100%;
             object-fit: cover;
             display: block;
+            border-radius: 0 !important;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 60px 16px 40px 16px;
+            }
+
+            .close-btn {
+                width: 40px;
+                height: 40px;
+                top: 16px;
+                right: 16px;
+            }
+
+            .close-btn::before,
+            .close-btn::after {
+                width: 40px;
+            }
+
+            .book {
+                width: 65px;
+                height: 95px;
+            }
+
+            .book-grid {
+                gap: 10px;
+            }
         }
     </style>
 </head>
@@ -100,91 +125,80 @@
     <div class="year-section">
         <p class="year-label">2025</p>
         <div class="book-grid">
-            <a class="book" href="https://www.goodreads.com/book/show/206318521-just-kids?from_search=true&from_srp=true&qid=UhIQYWpL0v&rank=1" target="_blank"><img src="books/justkids.jpg" alt="Just Kids"></a>
-            <a class="book" href="https://www.goodreads.com/book/show/18144590-the-alchemist?from_search=true&from_srp=true&qid=4u3EKfJX54&rank=1" target="_blank"><img src="books/alchemist.jpg" alt="The Alchemist"></a>
-            <a class="book" href="https://www.goodreads.com/book/show/60965426-the-creative-act?ref=nav_sb_ss_1_11" target="_blank"><img src="books/rick.jpg" alt="The Creative Act"></a>
-            <a class="book" href="https://www.goodreads.com/book/show/61439040-1984?ref=nav_sb_ss_1_4" target="_blank"><img src="books/1984.jpg" alt="1984"></a>
-            <a class="book" href="https://www.goodreads.com/book/show/52045757-minor-detail?from_search=true&from_srp=true&qid=BuoX1ZwEjN&rank=1" target="_blank"><img src="books/minor.jpg" alt="Minor Detail"></a>
-            <a class="book" href="https://www.goodreads.com/book/show/239775146-kafka-on-the-shore?from_search=true&from_srp=true&qid=oVGZYO3XTv&rank=1" target="_blank"><img src="books/kafkashor.jpg" alt="Kafka on the Shore"></a>
-            <a class="book" href="https://www.goodreads.com/book/show/905.The_Inner_Game_of_Tennis?ref=nav_sb_ss_1_20" target="_blank"><img src="books/tennis.jpg" alt="The Inner Game of Tennis"></a>
-            <a class="book" href="https://www.goodreads.com/book/show/11084145-steve-jobs?from_search=true&from_srp=true&qid=cWtU7fkjxY&rank=1" target="_blank"><img src="books/steve.jpg" alt="Steve Jobs""></a>
-            <a class="book" href="https://www.goodreads.com/book/show/338798.Ulysses?ref=nav_sb_ss_1_7" target="_blank"><img src="books/ulysses.jpg" alt="Ulysses"></a>
-            <a class="book" href="https://www.goodreads.com/book/show/10374.Hard_Boiled_Wonderland_and_the_End_of_the_World?from_search=true&from_srp=true&qid=1eY2zUrQJG&rank=7" target="_blank"><img src="books/hardboiled.jpg" alt="Hard Boiled Wonderland"></a>
-
+            <a class="book" href="https://www.goodreads.com/book/show/206318521-just-kids" target="_blank"><img src="books/justkids.jpg" alt="Just Kids"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/18144590-the-alchemist" target="_blank"><img src="books/alchemist.jpg" alt="The Alchemist"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/60965426-the-creative-act" target="_blank"><img src="books/rick.jpg" alt="The Creative Act"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/61439040-1984" target="_blank"><img src="books/1984.jpg" alt="1984"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/52045757-minor-detail" target="_blank"><img src="books/minor.jpg" alt="Minor Detail"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/239775146-kafka-on-the-shore" target="_blank"><img src="books/kafkashor.jpg" alt="Kafka on the Shore"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/905.The_Inner_Game_of_Tennis" target="_blank"><img src="books/tennis.jpg" alt="The Inner Game of Tennis"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/11084145-steve-jobs" target="_blank"><img src="books/steve.jpg" alt="Steve Jobs"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/338798.Ulysses" target="_blank"><img src="books/ulysses.jpg" alt="Ulysses"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/10374.Hard_Boiled_Wonderland_and_the_End_of_the_World" target="_blank"><img src="books/hardboiled.jpg" alt="Hard Boiled Wonderland"></a>
         </div>
     </div>
 
     <div class="year-section">
         <p class="year-label">2024</p>
         <div class="book-grid">
-            <a class="book" href="https://www.goodreads.com/book/show/52036.Siddhartha?ref=nav_sb_ss_1_4" target="_blank"><img src="books/sidartha.jpg" alt="Siddartha"></a>
-            <a class="book" href="https://www.goodreads.com/book/show/40121378-atomic-habits?from_search=true&from_srp=true&qid=7y1YqTeZqz&rank=1" target="_blank"><img src="books/atomic.jpg" alt="Atomic Habits"></a>
-            <a class="book" href="https://www.goodreads.com/book/show/2429135.The_Girl_With_the_Dragon_Tattoo?ref=nav_sb_ss_1_16" target="_blank"><img src="books/girldragon.jpg" alt="The Girl with the Dragon Tattoo"></a>
-            <a class="book" href="https://www.goodreads.com/book/show/10357575-1q84?from_search=true&from_srp=true&qid=09uWZgqhvr&rank=1" target="_blank"><img src="books/1q84.jpg" alt="1q84"></a>
-            <a class="book" href="https://www.goodreads.com/book/show/41733839-the-great-gatsby?from_search=true&from_srp=true&qid=xJn6LoxGCj&rank=1" target="_blank"><img src="books/gatsby.jpg" alt="The Great Gatsby"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/52036.Siddhartha" target="_blank"><img src="books/sidartha.jpg" alt="Siddartha"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/40121378-atomic-habits" target="_blank"><img src="books/atomic.jpg" alt="Atomic Habits"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/2429135.The_Girl_With_the_Dragon_Tattoo" target="_blank"><img src="books/girldragon.jpg" alt="The Girl with the Dragon Tattoo"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/10357575-1q84" target="_blank"><img src="books/1q84.jpg" alt="1q84"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/41733839-the-great-gatsby" target="_blank"><img src="books/gatsby.jpg" alt="The Great Gatsby"></a>
             <a class="book" href="https://www.goodreads.com/book/show/12483882-schoolgirl" target="_blank"><img src="books/almanack.jpg" alt="Almanack"></a>
-
         </div>
     </div>
 
     <div class="year-section">
         <p class="year-label">2023</p>
         <div class="book-grid">
-            <a class="book" href="https://www.goodreads.com/book/show/11298.A_Wild_Sheep_Chase?from_search=true&from_srp=true&qid=Sy3zSw1zT9&rank=1" target="_blank"><img src="books/sheepchase.jpg" alt="Sheep Chase"></a>
-            <a class="book" href="https://www.goodreads.com/book/show/40409718-post-office?ref=nav_sb_ss_1_11" target="_blank"><img src="books/postoffice.jpg" alt="Post Office"></a>
-            <a class="book" href="https://www.goodreads.com/book/show/10956.The_Virgin_Suicides?from_search=true&from_srp=true&qid=C0MKG7YkNR&rank=1 target="_blank"><img src="books/virginsuicides.jpg" alt="Virgin Suicides"></a>
-            <a class="book" href="https://www.goodreads.com/book/show/929.Memoirs_of_a_Geisha?ref=nav_sb_ss_1_19" target="_blank"><img src="books/geisha.jpg" alt="Memoirs of a Geisha"></a>
-
-
+            <a class="book" href="https://www.goodreads.com/book/show/11298.A_Wild_Sheep_Chase" target="_blank"><img src="books/sheepchase.jpg" alt="Sheep Chase"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/40409718-post-office" target="_blank"><img src="books/postoffice.jpg" alt="Post Office"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/10956.The_Virgin_Suicides" target="_blank"><img src="books/virginsuicides.jpg" alt="Virgin Suicides"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/929.Memoirs_of_a_Geisha" target="_blank"><img src="books/geisha.jpg" alt="Memoirs of a Geisha"></a>
         </div>
     </div>
 
     <div class="year-section">
         <p class="year-label">2022</p>
         <div class="book-grid">
-            <a class="book" href="https://www.goodreads.com/book/show/119073.The_Name_of_the_Rose?ac=1&from_search=true&qid=8MNzWDVwf1&rank=1" target="_blank"><img src="books/umberto.jpg" alt="Name of the Rose"></a>
-            <a class="book" href="https://www.goodreads.com/book/show/35721089-beautiful-boy?ref=nav_sb_ss_1_13" target="_blank"><img src="books/beautifulboy.jpg" alt="Beautiful Boy"></a>
-            <a class="book" href="https://www.goodreads.com/book/show/28862.The_Prince?ref=nav_sb_ss_5_10" target="_blank"><img src="books/prince.jpg" alt="The prince"></a>
-            <a class="book" href="https://www.goodreads.com/book/show/52578297-the-midnight-library?ref=nav_sb_ss_1_5" target="_blank"><img src="books/midnightlibrary.jpg" alt="Midnight Library"></a>
-
+            <a class="book" href="https://www.goodreads.com/book/show/119073.The_Name_of_the_Rose" target="_blank"><img src="books/umberto.jpg" alt="Name of the Rose"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/35721089-beautiful-boy" target="_blank"><img src="books/beautifulboy.jpg" alt="Beautiful Boy"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/28862.The_Prince" target="_blank"><img src="books/prince.jpg" alt="The Prince"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/52578297-the-midnight-library" target="_blank"><img src="books/midnightlibrary.jpg" alt="Midnight Library"></a>
         </div>
     </div>
 
     <div class="year-section">
         <p class="year-label">2021</p>
         <div class="book-grid">
-            <a class="book" href="https://www.goodreads.com/book/show/5107.The_Catcher_in_the_Rye?from_search=true&from_srp=true&qid=wQlOPumb3c&rank=1" target="_blank"><img src="books/catcher.jpg" alt="Catcher in the Rye"></a>
-            <a class="book" href="https://www.goodreads.com/book/show/170448.Animal_Farm?from_search=true&from_srp=true&qid=8BfVMAnhFV&rank=1" target="_blank"><img src="books/animalfarm.jpg" alt="Animal Farm"></a>
-            <a class="book" href="https://www.goodreads.com/book/show/7126.The_Count_of_Monte_Cristo?ref=nav_sb_ss_1_14" target="_blank"><img src="books/countmonte.jpg" alt="Count of Monte Cristo"></a>
-            <a class="book" href="https://www.goodreads.com/book/show/129915654-pride-and-prejudice?ref=nav_sb_ss_1_5" target="_blank"><img src="books/prideprejudice.jpg" alt="Pride and Prejudice"></a>
-            <a class="book" href="https://www.goodreads.com/book/show/10210.Jane_Eyre?ac=1&from_search=true&qid=Im52ghXy46&rank=1" target="_blank"><img src="books/janeeyre.jpg" alt="Jane Eyre"></a>
-
-
-
+            <a class="book" href="https://www.goodreads.com/book/show/5107.The_Catcher_in_the_Rye" target="_blank"><img src="books/catcher.jpg" alt="Catcher in the Rye"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/170448.Animal_Farm" target="_blank"><img src="books/animalfarm.jpg" alt="Animal Farm"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/7126.The_Count_of_Monte_Cristo" target="_blank"><img src="books/countmonte.jpg" alt="Count of Monte Cristo"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/129915654-pride-and-prejudice" target="_blank"><img src="books/prideprejudice.jpg" alt="Pride and Prejudice"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/10210.Jane_Eyre" target="_blank"><img src="books/janeeyre.jpg" alt="Jane Eyre"></a>
         </div>
     </div>
 
     <div class="year-section">
         <p class="year-label">2020</p>
         <div class="book-grid">
-            <a class="book" href="https://www.goodreads.com/book/show/9542749-the-illiad-of-homer?from_search=true&from_srp=true&qid=qLPki4Rueq&rank=1" target="_blank"><img src="books/illiad.jpg" alt="Illiad"></a>
-            <a class="book" href="https://www.goodreads.com/book/show/9581366-aenid?ref=nav_sb_ss_2_4" target="_blank"><img src="books/aenead.jpg" alt="Aenid"></a>
-            <a class="book" href="https://www.goodreads.com/book/show/5129.Brave_New_World?ref=nav_sb_ss_1_3" target="_blank"><img src="books/bravenew.jpg" alt="Brave New World"></a>
-            <a class="book" href="https://www.goodreads.com/book/show/890.Of_Mice_and_Men?from_search=true&from_srp=true&qid=oBUxP32Msg&rank=1" target="_blank"><img src="books/micemen.jpg" alt="Of Mice and Men"></a>
-            <a class="book" href="https://www.goodreads.com/book/show/56916837-to-kill-a-mockingbird?ref=nav_sb_ss_1_7" target="_blank"><img src="books/mocking.png" alt="To Kill a Mockingbird"></a>
-            <a class="book" href ="https://www.goodreads.com/book/show/56302573-farenheit-451?ref=nav_sb_ss_1_8" target="_blank"><img src="books/farenheit.png" alt="Farenheit 451"></a>
-            <a class="book" href="https://www.goodreads.com/book/show/2165.The_Old_Man_and_the_Sea?ref=nav_sb_ss_1_19" target="_blank"><img src="books/oldmansea.jpg" alt="Old Man and the Sea"></a>
-            <a class="book" href="https://www.goodreads.com/book/show/24830.The_Illustrated_Man?ref=nav_sb_ss_1_15" target="_blank"><img src="books/illustrated.png" alt="Illustrated Man"></a>
-            <a class="book" href="https://www.goodreads.com/book/show/43913694-macbeth?ref=nav_sb_ss_1_7" target="_blank"><img src="books/macbeth.jpg" alt="Macbeth"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/9542749-the-illiad-of-homer" target="_blank"><img src="books/illiad.jpg" alt="Illiad"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/9581366-aenid" target="_blank"><img src="books/aenead.jpg" alt="Aenid"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/5129.Brave_New_World" target="_blank"><img src="books/bravenew.jpg" alt="Brave New World"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/890.Of_Mice_and_Men" target="_blank"><img src="books/micemen.jpg" alt="Of Mice and Men"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/56916837-to-kill-a-mockingbird" target="_blank"><img src="books/mocking.png" alt="To Kill a Mockingbird"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/56302573-farenheit-451" target="_blank"><img src="books/farenheit.png" alt="Farenheit 451"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/2165.The_Old_Man_and_the_Sea" target="_blank"><img src="books/oldmansea.jpg" alt="Old Man and the Sea"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/24830.The_Illustrated_Man" target="_blank"><img src="books/illustrated.png" alt="Illustrated Man"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/43913694-macbeth" target="_blank"><img src="books/macbeth.jpg" alt="Macbeth"></a>
             <a class="book" href="https://www.goodreads.com/book/show/13006.Julius_Caesar" target="_blank"><img src="books/caesar.jpg" alt="Julius Caesar"></a>
-            <a class="book" href="https://www.goodreads.com/book/show/187181.The_Chosen?ref=nav_sb_ss_1_10" target="_blank"><img src="books/chosen.jpg" alt="The Chosen"></a>
+            <a class="book" href="https://www.goodreads.com/book/show/187181.The_Chosen" target="_blank"><img src="books/chosen.jpg" alt="The Chosen"></a>
             <a class="book" href="https://www.goodreads.com/book/show/1622.A_Midsummer_Night_s_Dream" target="_blank"><img src="books/midsummer.jpg" alt="Midsummer Night's Dream"></a>
             <a class="book" href="https://www.goodreads.com/book/show/12957.Much_Ado_About_Nothing" target="_blank"><img src="books/muchado.jpg" alt="Much Ado About Nothing"></a>
-
-
         </div>
     </div>
-    
 
 </div>
 </body>
