@@ -510,6 +510,7 @@ body::-webkit-scrollbar {
     color: #575656;
 }
 
+/* ── MOBILE ─────────────────────────────────────── */
 @media (max-width: 768px) {
 
     body {
@@ -521,6 +522,7 @@ body::-webkit-scrollbar {
     .flex-container {
         flex-direction: column;
         justify-content: flex-start;
+        align-items: flex-end;
         gap: 0.5rem;
         padding: 1rem 1rem 6rem 1rem;
         height: auto;
@@ -550,6 +552,7 @@ body::-webkit-scrollbar {
     #main-nav {
         position: static;
         align-items: flex-end;
+        text-align: right;
         width: 100%;
     }
 
@@ -661,7 +664,6 @@ body::-webkit-scrollbar {
         font-size: 0.95rem !important;
     }
 
-    /* Contact */
     .contact-intro {
         font-size: 1.1rem !important;
     }
