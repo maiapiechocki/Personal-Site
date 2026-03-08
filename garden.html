@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="sage.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Garden | Maia Piechocki</title>
     <style>
         body {
-            background-color: #faf7ee;
+            background-color: #fffdf7;
             margin: 0;
-            padding: 80px 20px 20px 60px;
+            padding: 100px 20px 20px 80px;
             font-family: sans-serif;
+        }
+
+        .folder-grid {
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+            align-items: flex-start;
         }
 
         .folder-column {
@@ -30,7 +36,6 @@
             font-size: 14px;
             width: 70px;
             transition: opacity 0.2s;
-            
         }
 
         .folder-link:hover {
@@ -74,56 +79,60 @@
         }
         .close-btn::before { transform: rotate(45deg); }
         .close-btn::after  { transform: rotate(-45deg); }
-    </style>
-</head>
-<body>
 
-    <div class="folder-column">
-
-         <a href="pics.html" class="folder-link">
-            <img src="folder.png" alt="folder" class="folder-icon">
-            <span class="folder-label">pics</span>
-        </a>
-
-        <a href="books.html" class="folder-link">
-            <img src="folder.png" alt="folder" class="folder-icon">
-            <span class="folder-label">books</span>
-        </a>
-
-        <a href="art.html" class="folder-link">
-            <img src="folder.png" alt="folder" class="folder-icon">
-            <span class="folder-label">art</span>
-        </a>
-
-        <a href="writing.html" class="folder-link">
-            <img src="folder.png" alt="folder" class="folder-icon">
-            <span class="folder-label">writing</span>
-        </a>
-    </div>
-
-
-</div>
-
-    <style>
         .garden-gif {
             position: fixed;
-            bottom: -55px; 
-            right: 40px;  
+            bottom: -55px;
+            right: 40px;
             z-index: 1000;
             pointer-events: none;
         }
 
         .garden-gif img {
-            width: 500px; 
+            width: 500px;
         }
 
         @media (max-width: 768px) {
             .garden-gif img {
-                width: 60px; 
+                width: 60px;
             }
         }
     </style>
+</head>
+<body>
+
+    <div class="folder-grid">
+
+        <!-- Column 1 -->
+        <div class="folder-column">
+            <a href="pics.html" class="folder-link">
+                <img src="folder.png" alt="folder" class="folder-icon">
+                <span class="folder-label">pics</span>
+            </a>
+            <a href="books.html" class="folder-link">
+                <img src="folder.png" alt="folder" class="folder-icon">
+                <span class="folder-label">books</span>
+            </a>
+            <a href="art.html" class="folder-link">
+                <img src="folder.png" alt="folder" class="folder-icon">
+                <span class="folder-label">art</span>
+            </a>
+            <a href="writing.html" class="folder-link">
+                <img src="folder.png" alt="folder" class="folder-icon">
+                <span class="folder-label">writing</span>
+            </a>
+        </div>
+
+        <div class="folder-column">
+            <a href="folder5.html" class="folder-link">
+                <img src="folder.png" alt="folder" class="folder-icon">
+                <span class="folder-label">recipes</span>
+            </a>
+        </div>
+
+    </div>
+
+    <a href="index.html" class="close-btn" aria-label="Close"></a>
 
 </body>
-<a href="index.html" class="close-btn" aria-label="Close"></a>
 </html>

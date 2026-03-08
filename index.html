@@ -4,11 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="sage.png">
+    <link rel="icon" type="image/png" href="sage.png" sizes="32x32">
     <title>Maia Piechocki</title>
     <link rel="stylesheet" href="style.css">
-    <script src="particles.js-master/particles.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -42,18 +40,36 @@
                                 </div>
                                 <div class="panel-about-item">
                                     <div id="socials">
-                                        <a href="https://www.linkedin.com/in/maia-piechocki-746793346/" target="_blank"> <img class="social-icon" src="linkedin.png" alt="LinkedIn"></a>
-                                        <a href="https://github.com/maiapiechocki" target="_blank"> <img class="social-icon" src="github.png" alt="Github"></a>
-                                        <a href="https://www.youtube.com/@maia_piechocki" target="_blank"> <img class="social-icon" src="youtube.png" alt="YouTube"></a>
+                                        <a href="https://www.linkedin.com/in/maia-piechocki-746793346/" target="_blank"><img class="social-icon" src="linkedin.png" alt="LinkedIn"></a>
+                                        <a href="https://github.com/maiapiechocki" target="_blank"><img class="social-icon" src="github.png" alt="Github"></a>
+                                        <a href="https://www.youtube.com/@maia_piechocki" target="_blank"><img class="social-icon" src="youtube.png" alt="YouTube"></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="about-right-col">
                                 <div class="panel-about-item">
-                                    <p>
-                                         Hi, my name is Maia. I am 21 years old and from Northern Virginia! I am a developer and graduate May 2026 with my bachelor's in Computer Science & Computer Engineering from
-                                         the University of Southern California(USC) in Los Angeles. I will be working at Lockheed Martin's space division as a software engineer.
-                                        In my spare time, I like being with my friends and family, going to cafes, restaurants, museums, and the beach. I also enjoy playing piano, reading, hiking, and baking. Thanks for checking out my website!
+                                    <div class="about-sections">
+                                        <p>Hello! I'm Maia, and you are <span id="user-ip">...</span>. Nice to meet you.</p>                                        <div class="about-section">
+                                            <h4>Education</h4>
+                                            <p>I am a fourth-year computer science and computer engineering student at the University of Southern California.</p>
+                                        </div>
+
+                                        <div class="about-section">
+                                            <h4>Work</h4>
+                                            <p>I will be joining Lockheed Martin's space division as a software engineer.</p>                                        
+                                        </div>
+
+                                        <div class="about-section">
+                                            <h4>Interests</h4>
+                                            <p>An unordered list of things I like: programming, 
+                                            <a href="books.html" style = "text-decoration: underline;" >reading</a>,
+                                            <a href="pics.html" style = "text-decoration: underline;">baking</a>, hiking, rocketry, climbing, piano,
+                                            <a href="pics.html" style = "text-decoration: underline;">photography</a>,
+                                            <a href="writing.html" style = "text-decoration: underline;">writing</a>, and
+                                            <a href="art.html" style = "text-decoration: underline;">art</a>.</p>
+
+                                    </div>
+                                </div>
                                 </div>
                             </div>
                         </div>
@@ -61,7 +77,6 @@
                 </div>
 
                 <div id="project-panel" class="panel hidden">
-                    
                     <div class="panel-header">
                         <div class="project-filters">
                             <span class="filter-btn" data-filter="coding">coding</span>
@@ -73,23 +88,22 @@
                     </div>
 
                     <div class="panel-content-scrollable" id="project-list">
-                
-                    <div class="panel-project-item" data-category="embedded ml">
-                        <img src="prImages/mlp_fpga.png" class="project-thumbnail" alt="Distributed MLP">
-                        
-                        <div class="project-text-wrapper">
-                            <h3><a href="https://github.com/maiapiechocki/EE454_Final_Project" target="_blank">Distributed MLP on FPGA & GPU<span>&#8599;</span></a></h3>
-                            <div class="descriptor-container">
-                                <div class="project-descriptor"><p>Verilog</p></div>
-                                <div class="project-descriptor"><p>CUDA</p></div>
-                                <div class="project-descriptor"><p>Python</p></div>
-                            </div>
-                        <p>Distributed neural network accelerator that implements Multilayer Perceptron (MLP) inference across two FPGA boards using Verilog. The design splits computation by offloading matrix-vector multiplication and activation to separate devices via a physical link. A parallel CUDA implementation utilizing shared memory optimizations serves as a high-performance benchmark for comparing FPGA and GPU architectures.</p>                        </div>
-                    </div>
 
-                    <div class="panel-project-item" data-category="embedded hardware">
+                        <div class="panel-project-item" data-category="embedded ml">
+                            <img src="prImages/mlp_fpga.png" class="project-thumbnail" alt="Distributed MLP">
+                            <div class="project-text-wrapper">
+                                <h3><a href="https://github.com/maiapiechocki/EE454_Final_Project" target="_blank">Distributed MLP on FPGA & GPU<span>&#8599;</span></a></h3>
+                                <div class="descriptor-container">
+                                    <div class="project-descriptor"><p>Verilog</p></div>
+                                    <div class="project-descriptor"><p>CUDA</p></div>
+                                    <div class="project-descriptor"><p>Python</p></div>
+                                </div>
+                                <p>Distributed neural network accelerator that implements Multilayer Perceptron (MLP) inference across two FPGA boards using Verilog. The design splits computation by offloading matrix-vector multiplication and activation to separate devices via a physical link. A parallel CUDA implementation utilizing shared memory optimizations serves as a high-performance benchmark for comparing FPGA and GPU architectures.</p>
+                            </div>
+                        </div>
+
+                        <div class="panel-project-item" data-category="embedded hardware">
                             <img src="prImages/flappy_bird.png" class="project-thumbnail" alt="Flappy Bird FPGA Game Screenshot">
-                            
                             <div class="project-text-wrapper">
                                 <h3><a href="https://github.com/maiapiechocki/Flappy_Bird_FPGA" target="_blank">Flappy Bird on FPGA<span>&#8599;</span></a></h3>
                                 <div class="descriptor-container">
@@ -99,11 +113,10 @@
                                 </div>
                                 <p>Implementation of the Flappy Bird game written in Verilog and synthesized onto an FPGA. Gravity, jump mechanics, pipe generation, collision detection, and score tracking managed by a Finite State Machine operating at the clock cycle level for real-time gameplay.</p>
                             </div>
-                    </div>
+                        </div>
 
-                    <div class="panel-project-item" data-category="ml">
+                        <div class="panel-project-item" data-category="ml">
                             <img src="prImages/Guardian_v2.png" class="project-thumbnail" alt="AI Link Discovery Pipeline">
-                            
                             <div class="project-text-wrapper">
                                 <h3><a href="https://github.com/maiapiechocki" target="_blank">Guardian v2: AI Entity Link Discovery<span>&#8599;</span></a></h3>
                                 <div class="descriptor-container">
@@ -113,24 +126,22 @@
                                 </div>
                                 <p>AI-driven pipeline that automates the discovery and mapping of hidden entity relationships within large datasets. This solution replaces labor-intensive manual link discovery with a scalable, three-layer verification process. It uses SentenceTransformers for semantic embeddings and an air-gapped Gemma 2B LLM for structured, explainable link validation.</p>
                             </div>
-                    </div>
+                        </div>
 
-                    <div class="panel-project-item" data-category="coding">
+                        <div class="panel-project-item" data-category="coding">
                             <img src="prImages/parking.png" class="project-thumbnail" alt="Parking System">
-                            
                             <div class="project-text-wrapper">
-                                <h3><a href="https://github.com/maiapiechocki" target="_blank">Multi-Server Parking System<span>&#8599;</span> </a></h3>
+                                <h3><a href="https://github.com/maiapiechocki" target="_blank">Multi-Server Parking System<span>&#8599;</span></a></h3>
                                 <div class="descriptor-container">
                                     <div class="project-descriptor"><p>C++</p></div>
                                     <div class="project-descriptor"><p>Socket API</p></div>
                                 </div>
                                 <p>Distributed system designed to manage campus parking reservations. Built in C++, this project uses UNIX sockets for all communication between the client, a central routing server, and three distinct backend servers.</p>
                             </div>
-                    </div>
+                        </div>
 
-                    <div class="panel-project-item" data-category="coding">
+                        <div class="panel-project-item" data-category="coding">
                             <img src="prImages/primordial_soup.png" class="project-thumbnail" alt="Brainfuck Soup">
-                            
                             <div class="project-text-wrapper">
                                 <h3><a href="https://github.com/maiapiechocki" target="_blank">Autopoietic Automata<span>&#8599;</span></a></h3>
                                 <div class="descriptor-container">
@@ -138,13 +149,12 @@
                                     <div class="project-descriptor"><p>PyGame</p></div>
                                     <div class="project-descriptor"><p>Genetic Algorithms</p></div>
                                 </div>
-                                <p>Artificial life simulation built in <strong>Python</strong> that visualizes the emergence of self-replicating code from random noise. It utilizes a custom virtual machine to execute programs written in a minimalist esoteric language, employing genetic algorithms to drive evolution and survival across a 2D grid rendered in <strong>PyGame</strong>.</p>                            </div>
+                                <p>Artificial life simulation built in <strong>Python</strong> that visualizes the emergence of self-replicating code from random noise. It utilizes a custom virtual machine to execute programs written in a minimalist esoteric language, employing genetic algorithms to drive evolution and survival across a 2D grid rendered in <strong>PyGame</strong>.</p>
+                            </div>
                         </div>
 
-
-                    <div class="panel-project-item" data-category="ml">
-                             <img src="prImages/fireloc2.png" class="project-thumbnail" alt="FireLoc">
-                             
+                        <div class="panel-project-item" data-category="ml">
+                            <img src="prImages/fireloc2.png" class="project-thumbnail" alt="FireLoc">
                             <div class="project-text-wrapper">
                                 <h3><a href="https://github.com/maiapiechocki/FireLoc-Mobile-Server" target="_blank">FireLoc<span>&#8599;</span></a></h3>
                                 <div class="descriptor-container">
@@ -154,13 +164,12 @@
                                 </div>
                                 <p>A real-time wildfire crowdsensing system that integrates monocular depth mapping with Digital Elevation Models (DEM) to localize fires using low-cost smartphones. The system utilizes an ensemble method of Deep Monocular Topography and triangulation algorithms to achieve accurate and rapid localization.</p>
                             </div>
-                    </div>
+                        </div>
 
                         <div class="panel-project-item" data-category="coding">
                             <img src="prImages/p5.png" class="project-thumbnail" alt="Vibe Analysis">
-                            
                             <div class="project-text-wrapper">
-                                <h3><a href="https://github.com/maiapiechocki/VibeAnalysis" target="_blank">Vibe.ai<span>&#8599;</span> </a></h3>
+                                <h3><a href="https://github.com/maiapiechocki/VibeAnalysis" target="_blank">Vibe.ai<span>&#8599;</span></a></h3>
                                 <div class="descriptor-container">
                                     <div class="project-descriptor"><p>Python</p></div>
                                     <div class="project-descriptor"><p>Javascript</p></div>
@@ -169,12 +178,11 @@
                                 <p>Audio-to-data visualizer that transcribes speech using the OpenAI API and analyzes sentiment with the <strong>Google Cloud Language API</strong>. A <b>FastAPI</b> backend processes and serves the data, which is then rendered as a live visualization in <strong>p5.js</strong>.</p>
                             </div>
                         </div>
-                        
+
                         <div class="panel-project-item" data-category="embedded">
                             <img src="prImages/hash.png" class="project-thumbnail" alt="Hash Core">
-                            
                             <div class="project-text-wrapper">
-                                <h3><a href="https://github.com/maiapiechocki" target="_blank">32-bit Hash Core<span>&#8599;</span> </a></h3>
+                                <h3><a href="https://github.com/maiapiechocki" target="_blank">32-bit Hash Core<span>&#8599;</span></a></h3>
                                 <div class="descriptor-container">
                                     <div class="project-descriptor"><p>SystemVerilog</p></div>
                                     <div class="project-descriptor"><p>Vitis HLS</p></div>
@@ -183,11 +191,8 @@
                             </div>
                         </div>
 
-
-
                         <div class="panel-project-item" data-category="embedded">
                             <img src="prImages/smart_plant.png" class="project-thumbnail" alt="Smart Plant">
-
                             <div class="project-text-wrapper">
                                 <h3><a href="https://github.com/maiapiechocki/smart-plant-rpi" target="_blank">Smart Plant<span>&#8599;</span></a></h3>
                                 <div class="descriptor-container">
@@ -198,18 +203,14 @@
                                 <p>IoT system built with Python, Flask, and a Raspberry Pi to automate plant watering. The Flask server hosts a web UI for control, while threading manages a background loop.</p>
                             </div>
                         </div>
-                        
-                        
 
                     </div>
                 </div>
 
-                
                 <div id="contact-panel" class="panel hidden">
                     <div class="panel-header right-align">
                         <a id="back-from-contact" class="panel-back-button">← back</a>
                     </div>
-                    
                     <div class="panel-content-scrollable">
                         <p class="contact-intro first-intro">Contact me directly using this form</p>
                         <form id="contact-form" action="https://formspree.io/f/movydkoo" method="POST">
@@ -219,10 +220,9 @@
                             </div>
                             <textarea name="message" placeholder="message"></textarea>
                         </form>
-                        
                         <div class="email-section">
                             <p class="contact-intro second-intro">or send me an email at: </p>
-                            <p id="myInput" class="copyable-email"><span class="email-address">piechock@usc.edu </span></p>
+                            <p id="myInput" class="copyable-email"><span class="email-address">piechock@usc.edu</span></p>
                             <span class="copy-text">(click to copy)</span>
                         </div>
                     </div>
@@ -237,6 +237,7 @@
         <img class="modal-content" id="expanded-img">
     </div>
 
-    <script src="script.js"></script>
+    <script src="particles.js-master/particles.js" defer></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

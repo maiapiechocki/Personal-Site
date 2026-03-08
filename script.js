@@ -30,6 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     initParticles();
 
+    fetch('https://api.ipify.org?format=json')
+        .then(res => res.json())
+        .then(data => {
+            document.getElementById('user-ip').textContent = data.ip;
+        });
+
     const mainNav = document.getElementById('main-nav');
     const projectPanel = document.getElementById('project-panel');
     const contactPanel = document.getElementById('contact-panel');
